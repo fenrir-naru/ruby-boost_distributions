@@ -6,6 +6,10 @@
 /pkg/
 /spec/reports/
 /tmp/
+/Gemfile.lock
+/.project
+/lib/**/*.so
 
 # rspec failure tracking
 .rspec_status
+/attic/
