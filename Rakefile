@@ -60,7 +60,7 @@ end
 
 
 desc "Generate SWIG wrapper codes"
-task :swig do
+task :swig, [:swig_options] do |task, args|
   swig_dir = File::join(File::dirname(__FILE__), 'ext', 'ninja-scan-light', 'tool', 'swig')
   out_base_dir = File::join(File::dirname(__FILE__), 'ext', 'boost_distributions')
   Dir::chdir(swig_dir){
@@ -71,7 +71,7 @@ task :swig do
       wrapper = File::join(out_dir, "#{mod_name}_wrap.cxx")
       sh [:make, :clean, wrapper,
           "BUILD_DIR=#{out_dir}",
-          "SWIGFLAGS='-c++ -ruby #{" -D__MINGW__" if ENV["MSYSTEM"]}'"].join(' ')
+          "SWIGFLAGS='-c++ -ruby #{" -D__MINGW__" if ENV["MSYSTEM"]} #{args[:swig_options]}'"].join(' ')
     }
   }
 end
