@@ -40,7 +40,60 @@ and execute:
 
 ## Usage
 
-TODO: Write usage instructions here
+Example usage is as the followings:
+
+```ruby
+require 'boost_distributions'
+
+# Generate normal (Gaussian) distribution instance with mu = 0, sigma = 1
+normal = BoostDistributions::Normal::new(0, 1)
+normal.mean # => 0
+normal.standard_deviation # => 1.0
+
+normal.pdf(0) # => 0.399, Probability density function
+normal.cdf(0) # => 0.5, Cumulative distribution function
+normal.quantile(0.5) # => 0
+```
+
+List of supported distributions are:
+
+| Distributions | Required minimum boost version |
+| ---- | ---- |
+|[Arcsine Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/arcsine_dist.html)|1.58.0|
+|[Bernoulli Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/bernoulli_dist.html)|1.35.0|
+|[Beta Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/beta_dist.html)|1.35.0|
+|[Binomial Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/binomial_dist.html)|1.35.0|
+|[Cauchy-Lorentz Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/cauchy_dist.html)|1.35.0|
+|[Chi Squared Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/chi_squared_dist.html)|1.35.0|
+|[Exponential Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/exp_dist.html)|1.35.0|
+|[Extreme Value Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/extreme_dist.html)|1.35.0|
+|[F Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/f_dist.html)|1.35.0|
+|[Gamma (and Erlang) Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/gamma_dist.html)|1.35.0|
+|[Geometric Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/geometric_dist.html)|1.46.0|
+|[Hyperexponential Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/hyperexponential_dist.html)|1.57.0|
+|[Hypergeometric Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/hypergeometric_dist.html)|1.40.0|
+|[Inverse Chi Squared Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/inverse_chi_squared_dist.html)|1.45.0|
+|[Inverse Gamma Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/inverse_gamma_dist.html)|1.45.0|
+|[Inverse Gaussian (or Inverse Normal) Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/inverse_gaussian_dist.html)|1.46.0|
+|[Kolmogorov-Smirnov Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/kolmogorov_smirnov_dist.html)|1.75.0|
+|[Laplace Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/laplace_dist.html)|1.40.0|
+|[Logistic Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/logistic_dist.html)|1.40.0|
+|[Log Normal Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/lognormal_dist.html)|1.35.0|
+|[Negative Binomial Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/negative_binomial_dist.html)|1.35.0|
+|[Noncentral Beta Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/nc_beta_dist.html)|1.36.0|
+|[Noncentral Chi-Squared Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/nc_chi_Squared_dist.html)|1.36.0|
+|[Noncentral F Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/nc_f_dist.html)|1.36.0|
+|[Noncentral T Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/nc_t_dist.html)|1.36.0|
+|[Normal (Gaussian) Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/normal_dist.html)|1.35.0|
+|[Pareto Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/pareto_dist.html)|1.35.0|
+|[Poisson Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/poisson_dist.html)|1.35.0|
+|[Rayleigh Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/rayleigh.html)|1.35.0|
+|[Skew Normal Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/skew_normal_dist.html)|1.50.0|
+|[Students t Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/students_t_dist.html)|1.35.0|
+|[Triangular Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/triangular_dist.html)|1.35.0|
+|[Uniform Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/uniform_dist.html)|1.35.0|
+|[Weibull Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/weibull_dist.html)|1.35.0|
+
 
 ## Development
 
