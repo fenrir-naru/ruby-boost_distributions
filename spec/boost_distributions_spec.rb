@@ -4,8 +4,7 @@ RSpec.describe BoostDistributions do
   it "has a version number" do
     expect(BoostDistributions::VERSION).not_to be nil
   end
-
-  it "does something useful" do
-    expect(false).to eq(true)
+  it "has a boost version number" do
+    expect(BoostDistributions::BOOST_VERSION).not_to be nil
   end
 end

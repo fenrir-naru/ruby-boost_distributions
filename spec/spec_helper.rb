@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "boost_distribution"
+require "boost_distributions"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
