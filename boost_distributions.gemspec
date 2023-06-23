@@ -10,14 +10,14 @@ Gem::Specification.new do |spec|
 
   spec.summary = "Interface to boost::math::distributions"
   spec.description = "This is a Ruby gem to calculate statistical properties of various distributions by using boost::math::distributions."
-  spec.homepage = "https://github.com/fenrir-naru/ruby_boost_distributions"
+  spec.homepage = "https://github.com/fenrir-naru/ruby-boost_distributions"
   spec.required_ruby_version = ">= 2.6.0"
 
   spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = spec.homepage
-  spec.metadata["changelog_uri"] = "https://github.com/fenrir-naru/ruby_boost_distributions/blob/main/CHANGELOG.md"
+  spec.metadata["changelog_uri"] = "https://github.com/fenrir-naru/ruby-boost_distributions/blob/main/CHANGELOG.md"
 
   spec.extensions = ["ext/boost_distributions/extconf.rb"]
 
