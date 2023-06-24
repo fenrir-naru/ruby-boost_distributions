@@ -6,6 +6,8 @@ $CFLAGS += cflags
 $CPPFLAGS += cflags if RUBY_VERSION >= "2.0.0"
 $LOCAL_LIBS += " -lstdc++ "
 
+dir_config('boost')
+
 IO_TARGETS = [
   [Kernel, :instance_eval],
   [(class << File; self; end), :class_eval], # https://github.com/ruby/ruby/commit/19beb028
