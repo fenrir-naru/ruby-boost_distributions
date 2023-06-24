@@ -80,4 +80,4 @@ file "ext/ninja-scan-light/tool" do |t|
   Rake::Task["git:submodules:init"].invoke
 end
 
-task :default => ["ext/ninja-scan-light/tool", :compile, :spec]
+task :default => [:compile, :spec]
