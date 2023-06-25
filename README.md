@@ -31,9 +31,11 @@ After installation of boost headers, install the gem as:
 
     $ gem install boost_distributions
 
-Note that if your boost headers are not in the standard path, the following alternative are helpful for each method.
+Note that if your boost headers are not in the standard path, the following alternative is helpful for each method.
 
     $ gem install boost_distributions -- --with-boost-include=/path/to/parent_directory_of_boost_header
+
+----
 
 Or if you want to include it into your application, add this line to Gemfile:
 
@@ -106,6 +108,7 @@ List of supported distributions are:
 |[Uniform Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/uniform_dist.html)|1.35.0|
 |[Weibull Distribution](https://www.boost.org/doc/libs/release/libs/math/doc/html/math_toolkit/dist_ref/dists/weibull_dist.html)|1.35.0|
 
+[See documentation in rubyrdoc.info](https://rubydoc.info/gems/boost_distributions/)
 
 ## Development
 
