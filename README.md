@@ -31,15 +31,24 @@ After installation of boost headers, install the gem as:
 
     $ gem install boost_distributions
 
+Note that if your boost headers are not in the standard path, the following alternative are helpful for each method.
+
+    $ gem install boost_distributions -- --with-boost-include=/path/to/parent_directory_of_boost_header
+
 Or if you want to include it into your application, add this line to Gemfile:
 
 ```ruby
 gem 'boost_distributions'
 ```
-
 and execute:
 
     $ bundle install
+
+following
+
+    $ bundle config build.boost_distributions --with-boost-include=/path/to/parent_directory_of_boost_header
+
+if your boost headers are in the non-standared path.
 
 ## Usage
 
