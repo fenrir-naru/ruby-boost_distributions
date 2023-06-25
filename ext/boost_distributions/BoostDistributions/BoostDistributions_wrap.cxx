@@ -3289,7 +3289,9 @@ SWIGINTERN boost::math::hyperexponential_distribution< double,policies::policy< 
         prob.begin(), prob.end(), range.begin(), range.end());
   }
 SWIGINTERN boost::math::hyperexponential_distribution< double,policies::policy< > > *new_boost_math_hyperexponential_distribution_Sl_double_Sc_policies_policy_Sl__Sg__Sg___SWIG_2(std::vector< double > const &range){
-    return new hyperexponential_distribution(range.begin(), range.end());
+    return new hyperexponential_distribution(range);
+    // two argument constructors have an overload problem. It is checked with 1.82.0.
+    //return new hyperexponential_distribution(range.begin(), range.end());
   }
 SWIGINTERN boost::math::hyperexponential_distribution< double,policies::policy< > >::value_type boost_math_hyperexponential_distribution_Sl_double_Sc_policies_policy_Sl__Sg__Sg__pdf(boost::math::hyperexponential_distribution< double,policies::policy< > > const *self,boost::math::hyperexponential_distribution< double,policies::policy< > >::value_type const &x){
     return boost::math::distribution_shim_t<105700>::pdf(*self, x);
