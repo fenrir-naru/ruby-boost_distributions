@@ -1,6 +1,6 @@
-# boost_distribution (Ruby gem)
+# boost_distributions (Ruby gem)
 
-boost_distribution is a Ruby gem to calculate various statistical properties of distributions supported by [boost::math::distributions](https://www.boost.org/doc/libs/release/libs/math/doc/html/dist.html).
+boost_distributions is a Ruby gem to calculate various properties of statistical distributions supported by [boost::math::distributions](https://www.boost.org/doc/libs/release/libs/math/doc/html/dist.html).
 
 [![Gem Version](https://badge.fury.io/rb/boost_distributions.svg)](https://badge.fury.io/rb/boost_distributions)
 [![Ruby](https://github.com/fenrir-naru/ruby-boost_distributions/actions/workflows/main.yml/badge.svg)](https://github.com/fenrir-naru/ruby-boost_distributions/actions/workflows/main.yml)
