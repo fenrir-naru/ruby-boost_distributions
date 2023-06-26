@@ -69,7 +69,7 @@ normal.cdf(0) # => 0.5, Cumulative distribution function
 normal.quantile(0.5) # => 0
 ```
 
-List of supported distributions are:
+[List of supported distributions](boost_version_comparison.md) are:
 
 | Distributions | Required minimum boost version |
 | ---- | ---- |
