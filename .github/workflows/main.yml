@@ -14,11 +14,11 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest]
-        ruby: [2.6, 2.7, '3.0', 3.1, 3.2]
+        ruby: [2.6, 2.7, '3.0', 3.1, 3.2, 3.3, 3.4, '4.0']
     runs-on: ${{ matrix.os }}
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v6
     - name: before_setup on Linux
       if: runner.os == 'Linux'
       run: |
